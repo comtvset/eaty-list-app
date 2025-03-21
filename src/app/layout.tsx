@@ -9,6 +9,7 @@ import { cookies } from 'next/headers';
 import { AlertProvider } from '@/contexts/alertContext';
 import { Suspense } from 'react';
 import Loading from './loading';
+import BackgroundWrapper from '@/components/backgroundWrapper/BackgroundWrapper';
 
 const mainFont = Quicksand({ weight: '400', subsets: ['latin'], preload: false });
 
@@ -39,10 +40,12 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <AlertProvider>
             <AuthProvider initialToken={token}>
-              <div className="wrapper">
-                <Header />
-                <Suspense fallback={<Loading />}>{children}</Suspense>
-              </div>
+              <BackgroundWrapper>
+                <div className="wrapper">
+                  <Header />
+                  <Suspense fallback={<Loading />}>{children}</Suspense>
+                </div>
+              </BackgroundWrapper>
             </AuthProvider>
           </AlertProvider>
         </NextIntlClientProvider>

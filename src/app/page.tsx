@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       <main className={styles.main}>
-        <h1>{t('title')}</h1>
+        <div className={styles.message}>
+          <h1>{t('title')}</h1>
+        </div>
       </main>
     </>
   );
