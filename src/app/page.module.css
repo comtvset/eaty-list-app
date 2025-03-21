@@ -47,6 +47,18 @@
   text-align: center;
 }
 
+.message {
+  background-color: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  color: #4b4b4b;
+}
+
 @media (width <= 850px) {
   .providersContainer {
     flex-direction: column;

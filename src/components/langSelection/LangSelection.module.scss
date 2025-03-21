@@ -7,14 +7,12 @@
     font-size: 1.2rem;
     font-family: inherit;
     outline: none;
-    background-color: white;
     transition: 0.4s ease;
     cursor: pointer;
     padding: 5px 10px;
     appearance: none;
-    appearance: none;
-    appearance: none;
     padding-right: calc(1em + 10px);
+    background-color: transparent;
   }
 
   &::after {
